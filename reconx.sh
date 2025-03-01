@@ -67,7 +67,6 @@ if [ -s alive.txt ]; then
     # Run standard vulnerability scans
     nuclei -l alive.txt -t takeovers/ -t cves/ -t exposures/ -t misconfiguration/ -o "$NUCLEI_WEB_RESULTS" -as &
 
-&
 fi
 
 if [ -s "$CLEANED_PORTS" ]; then
